@@ -14,5 +14,29 @@
 	</language-properties>
 	<custom-jsp-dir>/custom_jsps</custom-jsp-dir>
 	<custom-jsp-global>true</custom-jsp-global>
+	
+	<servlet-filter>
+		<servlet-filter-name>My Filter</servlet-filter-name>
+		<servlet-filter-impl>com.liferay.training.filter.MyFilter</servlet-filter-impl>
+		<init-param>
+			<param-name>hello</param-name>
+			<param-value>future astronaut</param-value>
+		</init-param>
+	</servlet-filter>
+	<servlet-filter-mapping>
+		<servlet-filter-name>My Filter</servlet-filter-name>
+		<before-filter>SSO Open SSO Filter</before-filter>
+		<url-pattern>/web/guest/home/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</servlet-filter-mapping>
 
+<!-- 	<service> -->
+<!-- 		<service-type> -->
+<!-- 			com.liferay.portlet.expando.service.ExpandoValueLocalService -->
+<!-- 		</service-type> -->
+<!-- 		<service-impl> -->
+<!-- 			com.liferay.training.MyExpandoValueLocalService -->
+<!-- 		</service-impl> -->
+<!-- 	</service> -->
 </hook>
