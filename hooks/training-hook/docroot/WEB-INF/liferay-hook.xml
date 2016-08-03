@@ -3,4 +3,16 @@
 
 <hook>
 	<portal-properties>portal.properties</portal-properties>
+	<language-properties>
+		content/Language.properties
+	</language-properties>
+	<language-properties>
+		content/Language_es.properties
+	</language-properties>
+	<language-properties>
+		content/Language_en.properties
+	</language-properties>
+	<custom-jsp-dir>/custom_jsps</custom-jsp-dir>
+	<custom-jsp-global>true</custom-jsp-global>
+
 </hook>
