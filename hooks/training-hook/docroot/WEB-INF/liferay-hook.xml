@@ -39,4 +39,8 @@
 <!-- 			com.liferay.training.MyExpandoValueLocalService -->
 <!-- 		</service-impl> -->
 <!-- 	</service> -->
+	<struts-action>
+		<struts-action-path>/wiki/edit_page</struts-action-path>
+		<struts-action-impl>com.liferay.training.spacestrutsaction.hook.action.SpaceStrutsPortletAction</struts-action-impl>
+	</struts-action>
 </hook>
