@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.training.parts.model.Manufacturer">
+		<field name="manufacturerId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="name" type="String" />
+		<field name="emailAddress" type="String" />
+		<field name="website" type="String" />
+		<field name="phoneNumber" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="userName" type="String" />
+	</model>
+	<model name="com.liferay.training.parts.model.Part">
+		<field name="partId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="userId" type="long" />
+		<field name="manufacturerId" type="long" />
+		<field name="name" type="String" localized="true" />
+		<field name="partNumber" type="String" />
+		<field name="orderDate" type="Date" />
+		<field name="quantity" type="int" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="userName" type="String" />
+	</model>
+</model-hints>

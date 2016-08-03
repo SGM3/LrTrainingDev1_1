@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.liferay.training.parts">
+	<author>Shanon Mathai</author>
+	<namespace>Inventory</namespace>
+	
+	<!-- Define the entity for the Inventory_Manufacturer table -->
+	<entity name="Manufacturer" local-service="true" remote-service="false">
+
+		<!-- Primary key column -->
+		<column name="manufacturerId" type="long" primary="true" />
+
+		<!-- Foreign key columns -->
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+
+		<!-- Other columns -->
+		<column name="name" type="String" />
+		<column name="emailAddress" type="String" />
+		<column name="website" type="String" />
+		<column name="phoneNumber" type="String" />
+
+		<!-- Audit Fields -->
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="userName" type="String" />
+
+		<!-- Sort order -->
+		<order by="asc">
+			<order-column name="name" />
+		</order>
+
+		<!-- Finder Methods -->
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+	</entity>
+
+	<!-- Define the entity for the Inventory_Part table -->
+	<entity name="Part" local-service="true" remote-service="false">
+
+		<!-- Primary key column -->
+		<column name="partId" type="long" primary="true" />
+
+		<!-- Foreign key columns -->
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+		<column name="manufacturerId" type="long" />
+
+		<!-- Other columns -->
+		<column name="name" type="String" localized="true" />
+		<column name="partNumber" type="String" />
+		<column name="orderDate" type="Date" />
+		<column name="quantity" type="int"/>
+
+		<!-- Audit Fields -->
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="userName" type="String" />
+
+		<!-- Sort order -->
+		<order by="asc">
+			<order-column name="name" />
+		</order>
+
+		<!-- Finder Methods -->
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+
+		<finder name="Manufacturer" return-type="Collection">
+			<finder-column name="manufacturerId" />
+            <finder-column name="groupId" />
+		</finder>
+
+	</entity>
+</service-builder>

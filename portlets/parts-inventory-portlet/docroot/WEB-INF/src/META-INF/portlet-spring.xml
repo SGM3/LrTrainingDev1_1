@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.liferay.training.parts.service.ManufacturerLocalService" class="com.liferay.training.parts.service.impl.ManufacturerLocalServiceImpl" />
+	<bean id="com.liferay.training.parts.service.persistence.ManufacturerPersistence" class="com.liferay.training.parts.service.persistence.ManufacturerPersistenceImpl" parent="basePersistence" />
+	<bean id="com.liferay.training.parts.service.PartLocalService" class="com.liferay.training.parts.service.impl.PartLocalServiceImpl" />
+	<bean id="com.liferay.training.parts.service.persistence.PartPersistence" class="com.liferay.training.parts.service.persistence.PartPersistenceImpl" parent="basePersistence" />
+</beans>

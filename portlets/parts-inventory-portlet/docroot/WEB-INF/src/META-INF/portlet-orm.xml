@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.liferay.training.parts.model.impl.ManufacturerModelImpl">
+		<attributes>
+			<id name="manufacturerId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="name" />
+			<basic name="emailAddress" />
+			<basic name="website" />
+			<basic name="phoneNumber" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="userName" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.liferay.training.parts.model.impl.PartModelImpl">
+		<attributes>
+			<id name="partId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<basic name="userId" />
+			<basic name="manufacturerId" />
+			<basic name="name" />
+			<basic name="partNumber" />
+			<basic name="orderDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="quantity" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="userName" />
+			<transient name="modelAttributes" />
+			<transient name="nameCurrentLanguageId" />
+			<transient name="nameMap" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.liferay.training.parts.model.impl.ManufacturerImpl" name="Manufacturer">
+		<table name="Inventory_Manufacturer" />
+		<attributes />
+	</entity>
+	<entity class="com.liferay.training.parts.model.impl.PartImpl" name="Part">
+		<table name="Inventory_Part" />
+		<attributes />
+	</entity>
+</entity-mappings>
